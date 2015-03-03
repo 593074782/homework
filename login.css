@@ -1,0 +1,39 @@
+a,div{
+	margin:0 ;
+	padding: 0;
+}
+a:visited
+ {
+ 	color:blue;
+ }  
+.main{
+	width: 960px;
+	margin: 0 auto;
+		overflow: hidden;
+}
+.one{
+	text-align: center;
+}
+.two{
+	width: 200px;
+	height: 30px;
+	margin: 5px;
+
+}
+.login{
+	width: 250px;
+}
+.p{
+	color: red;
+	font-size: 10px;
+}
+.span{
+	 position: absolute;
+	 color: red;
+	 margin-top:108px; 
+}
+.span1{
+	 position: absolute;
+	 color: red;
+	 margin-top:12px;	  
+}

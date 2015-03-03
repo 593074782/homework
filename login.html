@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册页面</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+	<div class="main">
+		<div >
+	  <form method="post"  action="login.php" class="one"><!-- 你注意看下这里 我可能漏东西 -->
+		  	<input type="text" name="name" placeholder="请输入用户名" class="two" id="input"style="margin-top:100px;"  onkeyup="value=value.replace(' ','')" onkeydown="value=value.replace(' ','')"><!-- <span id="span" class="span" ></span> -->
+		    <br/>
+		    <input type="password" name="password" placeholder="请输入密码(6-16字符)" class="two" id="input1" maxlength="16" onblur="two();" onkeyup="value=value.replace(' ','')" onkeydown="value=value.replace(' ','')" ><span id="span1" class="span1"></span>
+		    <br/>
+		    <input type="password" name="again" placeholder="请再次输入密码" class="two" id="input2" maxlength="16" onblur="three(),four();" onkeyup="value=value.replace(' ','')" onkeydown="value=value.replace(' ','')"><span id="span2" class="span1"></span>
+		    <br/>
+		    <input type="submit"  value="注册"  class="login" id="input3" disabled="disabled">
+		    <br/>
+
+		    <a href="main.html" >已有账号,直接登陆</a>
+		    </form>
+		  	
+        
+		  </div>
+	</div>
+	<script type="text/javascript">          
+           // var ospan = document.getElementById("span");
+           var ospan1 = document.getElementById("span1");
+           var ospan2 = document.getElementById("span2");
+           var oinput = document.getElementById("input");
+           var oinput1 = document.getElementById("input1");
+           var oinput2 = document.getElementById("input2");
+           var oinput3 = document.getElementById("input3");
+        
+          	// function one(){	  
+          	//    	if(oinput.value.indexOf(" ")>=0){
+           //                ospan.innerHTML="用户名中不能含有空格";
+          	//    	}
+          	//    	else{
+          	//    		ospan.innerHTML="";
+          	//    	}
+          	   
+          	// }    
+          	function two(){          	   
+          	   	if (oinput1.value.length < 6 || oinput1.value.length>16) {
+          	   		ospan1.innerHTML="密码的长度不符合要求";
+          	   	}
+          	   	else{
+          	   		ospan1.innerHTML="";
+          	   	}
+          	   }         	
+          	function three(){      	   
+          	   	if(oinput1.value!=oinput2.value&&oinput2.value!=""){
+          	   		ospan2.innerHTML="两次输入的密码不一致,请重新输入";
+          	   	}	
+          	   	else{
+          	   		ospan2.innerHTML="";
+          	   	}  
+          	}   
+            function four(){
+                   if(ospan1.innerHTML =="" && ospan2.innerHTML==""){
+                    oinput3.disabled = false;
+                   }
+                   else{
+                     oinput3.disabled = true;
+                   }
+            }  
+
+	</script>
+</body>	
+</html>
+       

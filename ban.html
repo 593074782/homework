@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>留言板</title>
+	<link rel="stylesheet" href="ban.css">
+</head>
+	<body>
+	 <div class="main">
+
+       <!--  这里的留言给到的是那个大的div里面 -->
+       <form>
+         <textarea type="text" placeholder="请输入留言内容" class="liuyan" id="liuyan"></textarea>
+         <input type="submit" value="发表" class="btn">
+       </form>
+	 
+	    <!-- 这里放大的留言的内容 -->
+        <div class="big">
+
+            <div class = "style">   <span> 留言的人:</span> 这里是留言  </div>
+            <a href="#" class="reply" >回复</a> 
+            <div class = "style1">  <span> 留言的人:</span>这里是对留言的回复 点击那个回复的按钮 提交的东西放在这个div里面 </div>
+            <div class = "style1" >  <span> 留言的人:</span>这里是对留言的回复 </div>
+              
+              <!-- 楼中楼回复 <-->
+            <form class="form1" >
+              <textarea class="rpy"> </textarea>
+              <input type="submit" value="发表" class="btn1" > 
+            </form>
+
+          <!--   一个大的留言到这里结束 -->
+            <div class = "style"> <span> 留言的人:</span> aaaa</div>
+            <a href="#" class="reply" >回复</a> 
+             <form class="form1" >
+              <textarea class="rpy"> </textarea>
+              <input type="submit" value="发表" class="btn1" > 
+            </form>
+
+        </div> 
+      </div>
+		<script type="text/javascript">
+     var oa = document.getElementsByTagName("a");
+     var oform = document.getElementsByTagName("form");
+     var oinput = document.getElementsByTagName("input");
+     var otext = document.getElementsByTagName("textarea");
+        function ban(index){
+            oa[index].onclick = function(){
+               if(oform[index+1].style.display == "none"){
+                  oform[index+1].style.display = "block";
+               }
+               else{
+                  oform[index+1].style.display = "none";
+               }
+            }
+        }
+         function oban(){
+          for(i = 0 ; i < oa.length ; i++){
+             ban(i);
+          }
+         }
+         function nonull( index ){
+                   if( otext[index].value = "" ){
+                      otext.disabled = true;
+                   }
+                   else{
+                    otext.disabled = false;
+                   }
+         }
+         function notnull(){
+                  for (i = 0 ;i <otext.length ; i++ ){
+                    nonull(i);
+                  }
+         }
+      // oreply.onclick = function(){
+      //   if(oform1.style.display == "none"){
+      //      oform1.style.display = "block"; 
+      //   }
+      //   else{
+      //     oform1.style.display = "none"; 
+      //   }
+           
+      // }
+      oban();
+</script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+a,div,body{
+	margin:0 ;
+	padding: 0;
+}
+a{
+ 	color:red;
+ 	text-decoration: none;
+ }  
+ a:hover{
+ 	text-decoration: underline;
+ }
+ span,a,p,div{
+ font-family:"微软雅黑";
+}
+
+body{
+	background-color: rgb(115,180,192);
+}
+.main{
+	width: 960px;
+	height: 150px;
+	margin: 0 auto;
+	overflow: hidden;
+	background-image: url(five.jpg);
+	background-repeat: no-repeat;
+	background-size:100%   500%;
+	}
+.login{
+	float: right;
+	margin-right: 40px;
+	overflow: hidden;
+	color: white;
+}
+.one{
+	float: left;
+	margin: 100px 20px;
+	color: rgb(0,153,204);
+}
+.box {
+	margin-left: 733px;
+	margin-top:20px; 
+    width: 200px;
+    height: 80px;
+    border: 1px solid black;
+    display: none;
+}
+.pass{
+	width: 120px;
+	margin: 4px 40px;
+}

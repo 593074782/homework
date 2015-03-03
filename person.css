@@ -1,0 +1,45 @@
+a,div,body{
+	margin:0 ;
+	padding: 0;
+}
+body{
+  background-color: rgb(115,180,192);
+}
+span,a,p,div{
+ font-family:"微软雅黑";
+}
+.main{
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+	 background-color: white;
+}
+.top{
+  margin: 0 auto;
+  overflow: hidden;
+  width: 680px;
+}
+.user{
+	border-bottom: 1px solid rgb(202,229,239);
+	padding: 20px 0;
+} 
+.user a:hover{
+	text-decoration: underline;
+}
+.btn{
+	float: right;
+	font-size:15px;
+	text-align: center;
+	color: rgb(37,149,183);
+	text-decoration: none;
+}
+.cont{
+	padding-left: 100px;
+	line-height: 30px;
+}
+.change{
+	display: none;
+}
+.sure{
+	float: right;
+}
