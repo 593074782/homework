@@ -21,7 +21,7 @@ $time		   =date("Y.m.d.h:i:sa");
  echo "恭喜你成功注册";
  }
 
- header("refresh:1;url=main.html");
+ header("refresh:1;url=index.html");
 
 
 // 同时建立了两个表，不太简便
